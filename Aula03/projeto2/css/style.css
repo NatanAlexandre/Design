@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+body {
+    background-image: url(../imgs/ceu-estrelado.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    width: 100vw;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.unifecaf {
+    width: 150px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 30px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    word-spacing: 240px;
+}
+
+.rocket {
+    width: 180px;
+    height: 80%;
+    justify-self: center;
+    position: absolute;
+}
+
+.clouds {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    position: relative;
+}
+
+.cloudRight, .cloudLeft {
+    width: 50%;
+    height: 150px;
+}
