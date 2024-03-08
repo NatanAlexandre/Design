@@ -91,6 +91,10 @@ footer {
         text-align: center;
     }
 
+    .coca {
+        height: 200px;
+    }
+
     footer {
         height: 60px;
         margin-right: 25px;
