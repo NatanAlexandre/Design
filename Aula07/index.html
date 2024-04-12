@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <h1>Cadastre as Informações</h1>
+        <form>
+            <div>
+                <label for="nome">Nome: </label>
+                <input type="text" id="nome" autocomplete="off">
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" autocomplete="off">
+            </div>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" id="password" autocomplete="off">
+            </div>
+            <div>
+                <label for="confimePassword">Confirme Password: </label>
+                <input type="password" id="confimePassword" autocomplete="off">
+            </div>
+            <div>
+                <label>Qual sua cor favorita?</label>
+                <select>
+                    <option value="Azul">Azul</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Vermelho">Vermelho</option>
+                </select>
+            </div>
+            <div>
+                <label>Qual a sua linguagem favorita:</label>
+                <p class="prefer-linguagens">
+                    <input type="radio" name="linguagens" value="html">HTML
+                    <input type="radio" name="linguagens" value="css"> CSS
+                    <input type="radio" name="linguagens" value="js"> JS
+                </p>
+            </div>
+            <div class="buttons">
+                <button type="reset" class="limpar">Limpar</button>
+                <button type="submit" class="enviar">Enviar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
