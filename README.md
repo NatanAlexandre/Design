@@ -8,4 +8,5 @@
   <li><a href="https://natanalexandre.github.io/Design/Aula06/Pobre-Juan-main/index.html">Pobre Juan</a>: Cards</li>
   <li><a href="https://natanalexandre.github.io/Design/Aula07/index.html">Inputs</a>: Testes Inputs</li>
   <li><a href="https://natanalexandre.github.io/Design/Aula08/index.html">Cep<a/>: API de consulta de CEP</li>
+  <li><a href="https://natanalexandre.github.io/Design/Projeto-de-Extensão/index.html">CineFlix<a/>: API de Filmes</li>
 </ul>
