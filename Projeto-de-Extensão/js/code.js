@@ -1,4 +1,6 @@
 let urlImagem = 'https://image.tmdb.org/t/p/w500/';
+const apiKey = 'edde62da66c86b9efdd0e9c6f82196d1';
+const botaoConsultar = document.getElementById('pesquisar');
 
 const setCreateCard = async function () {
   let divCards = document.getElementById('card');
@@ -39,6 +41,51 @@ const setCreateCard = async function () {
   }
 };
 
-window.addEventListener('load', function () {
+const showMoviePopup = function (movie) {
+  let popup = document.createElement('div');
+  popup.classList.add('popup');
+
+  let title = document.createElement('h2');
+  title.textContent = movie.title;
+
+  let overview = document.createElement('p');
+  overview.textContent = movie.overview;
+
+  let closeButton = document.createElement('button');
+  closeButton.textContent = 'Fechar';
+  closeButton.addEventListener('click', () => {
+    document.body.removeChild(popup);
+  });
+
+  popup.appendChild(title);
+  popup.appendChild(overview);
+  popup.appendChild(closeButton);
+
+  document.body.appendChild(popup);
+};
+
+const getDadosFilme = async function (){
+  let filme = document.getElementById('search').value;
+  if (filme.value == ''){
+    alert('Digite o filme a ser procurado');
+    return
+  } 
+
+  try {
+    const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(filme)}`);
+    const data = await response.json();
+
+    if (data.results.length > 0){
+      const movie = data.results[0];
+      showMoviePopup(movie);
+    }
+  }
+  catch(error){
+    alert('Erro ao obter dados do filme');
+  }
+}
+
+window.addEventListener('load', function(){
   setCreateCard();
-});
+  botaoConsultar.addEventListener('click', getDadosFilme);
+})
