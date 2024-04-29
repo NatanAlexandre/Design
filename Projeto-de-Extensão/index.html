@@ -8,14 +8,30 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <div class="blackout"></div>
     <header>
         <img src="./imgs/cineflix.png" alt="cineflix-logo" class="logo">
         <div class="find">
-            <input type="search" name="search" id=" " class="search" placeholder="Buscar Filme">
-            <img src="./imgs/search.png" alt="lupa" class="lupa" onclick="buscarFilme()">
+            <input type="text" name="search" id="search" class="search" placeholder="Buscar Filme" autocomplete="off">
+            <button id="pesquisar" class="lupa" onclick="getDadosFilme()"><img src="./imgs/search.png" alt="lupa" class="lupaimg"></button>
         </div>
     </header>
     <main>
+        <div class="popup" id="popup">
+            <div class="pop">
+                <div class="popImg" id="popImg"></div>
+            </div>
+            <div class="info">
+                <div class="content">
+                    <h1 class="title">Título</h1>
+                    <div class="container">
+                        <h2 class="subtitle">Sinopse: </h2>
+                        <p class="overview">Sinopse Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nostrum voluptatem repellat ab est corrupti nihil sequi dicta reiciendis tempora. Incidunt commodi beatae sit fugiat maiores harum vero sed dolor?</p>
+                    </div>
+                </div>
+                <button class="close">Fechar</button>
+            </div>
+        </div>
         <div class="lancamentos">
             <h1>CineFlix</h1>
             <div class="imgfilm"></div>
